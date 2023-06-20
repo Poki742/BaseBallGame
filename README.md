@@ -1,5 +1,8 @@
 # Scanner와 Random을 이용한 숫자야구게임
-Java
+
+## 코딩장소
+Java - Eclipse
+
 ## 설명
 
 ```java
