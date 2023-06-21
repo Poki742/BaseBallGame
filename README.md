@@ -45,7 +45,7 @@ while(true) {
 //난수확인
 //System.out.println(randomCnt+"회:"+com1+" "+com2+" "+com3);
 ```
-난수확인을 할 사람은 만들어도 좋다. 하지만 안 하는게 더 좋다.<br>
+난수확인을 할 사람은 만들어도 좋다. 하지만 안 하는게 더 머리는 좋아짐짐.<br>
 
 ```java
 while(true) {
