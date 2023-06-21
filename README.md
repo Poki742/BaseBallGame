@@ -6,8 +6,8 @@ Java - Eclipse
 ## 설명
 
 ```java
-Random random = new Random();
-Scanner scanner = new Scanner(System.in);
+Random rd = new Random();
+Scanner sc = new Scanner(System.in);
   ```
 scanner와 randeom를 만든다.<br>
 
@@ -30,9 +30,9 @@ while(true) {
 		//몇번만에 난수가 생성되는지 확인
 		randomCnt++;				
 	  //1~9사이의 난수생성
-		com1 = random.nextInt(100) % 9 + 1;
-		com2 = random.nextInt(100) % 9 + 1;
-		com3 = random.nextInt(100) % 9 + 1;
+		com1 = rd.nextInt(100) % 9 + 1;
+		com2 = rd.nextInt(100) % 9 + 1;
+		com3 = rd.nextInt(100) % 9 + 1;
 		if(!(com1==com2 || com2==com3 || com3==com1)) {				
 			//중복되지 않는 난수 생성에 성공하면 루프탈출
 			break;
@@ -52,9 +52,9 @@ while(true) {
 				//사용자로부터 3개의 정수를 입력받는다.
 				System.out.println("3개의정수를 입력하세요(1~9)");
 				System.out.println("스페이스로 구분하시고 마지막에 Enter를 눌러주세요");				
-				user1 = scanner.nextInt();
-				user2 = scanner.nextInt();
-				user3 = scanner.nextInt();
+				user1 = sc.nextInt();
+				user2 = sc.nextInt();
+				user3 = sc.nextInt();
 					
 				//게임카운트 1회 증가
 				gameCount++;
@@ -94,7 +94,7 @@ while(true) {
 
 ```java
 System.out.println("한게임 더 하시겠습니까?(0:종료,1:재시작)");
-			int restart = scanner.nextInt();
+			int restart = sc.nextInt();
 			if(restart==0) {
 				//게임종료
 				System.out.println("\n==게임이 종료되었습니다.==\n");
@@ -123,21 +123,48 @@ public class Baseball2 {
 		
 	public static void main(String[] args) {
 		
-		Random random = new Random();
-		Scanner scanner = new Scanner(System.in);
+		Random rd = new Random();
+		Scanner sc = new Scanner(System.in);
 			
 		//게임에서 사용할 변수
 		int com1, com2, com3;		
 		int user1, user2, user3;
 		int randomCnt = 0;//난수생성 카운트
 		int gameCount = 0;//게임 카운트
-		int strikeCnt = 0;//스트라이크 카운트
+		int strikeCnt = 0;//스크라이크 카운트
 		int ballCnt = 0;//볼 카운트
 			
 		//게임전체반복	
 		while(true) {		
 			//중복되지 않는 3개의 난수생성
-			while(트라이크(숫자와 위치까지 일치)
+			while(true) {
+				//몇번만에 난수가 생성되는지 확인
+				randomCnt++;				
+				//1~9사이의 난수생성
+				com1 = rd.nextInt(100) % 9 + 1;
+				com2 = rd.nextInt(100) % 9 + 1;
+				com3 = rd.nextInt(100) % 9 + 1;
+				if(!(com1==com2 || com2==com3 || com3==com1)) {				
+					//중복되지 않는 난수 생성에 성공하면 루프탈출
+					break;
+				}
+			}////while end
+				
+			//난수확인
+			//System.out.println(randomCnt+"회:"+com1+" "+com2+" "+com3);
+				
+			while(true) {
+				//사용자로부터 3개의 정수를 입력받는다.
+				System.out.println("3개의정수를 입력하세요(1~9)");
+				System.out.println("스페이스로 구분하시고 마지막에 Enter를 눌러주세요");				
+				user1 = sc.nextInt();
+				user2 = sc.nextInt();
+				user3 = sc.nextInt();
+					
+				//게임카운트 1회 증가
+				gameCount++;
+					
+				//판단1 - 스크라이크(숫자와 위치까지 일치)
 				if(com1==user1) strikeCnt++;
 				if(com2==user2) strikeCnt++;
 				if(com3==user3) strikeCnt++;
@@ -169,7 +196,7 @@ public class Baseball2 {
 			}////while end
 				
 			System.out.println("한게임 더 하시겠습니까?(0:종료,1:재시작)");
-			int restart = scanner.nextInt();
+			int restart = sc.nextInt();
 			if(restart==0) {
 				//게임종료
 				System.out.println("\n==게임이 종료되었습니다.==\n");
