@@ -50,7 +50,7 @@ while(true) {
 			//중복되지 않는 난수 생성에 성공하면 루프탈출
 			break;
 		}
-	}////while end
+	}//while end
 ```
 반복문 생성 후 중복되지 않는 3개의 난수를 생성해서 성공하면 반복문에서 브레이크를 걸어 탈출시킨다.<br>
 
@@ -63,8 +63,8 @@ while(true) {
 ```java
 while(true) {
 	//사용자로부터 3개의 정수를 입력받는다.
-	System.out.println("3개의정수를 입력하세요(1~9)");
-	System.out.println("스페이스로 구분하시고 마지막에 Enter를 눌러주세요");				
+	System.out.println("3개의정수를 입력해(1~9)");
+	System.out.println("스페이스로 구분하고 마지막에 Enter를 눌러");				
 	user1 = sc.nextInt();
 	user2 = sc.nextInt();
 	user3 = sc.nextInt();
@@ -85,13 +85,13 @@ while(true) {
 //게임종료판단
 if(strikeCnt==3) {
 	System.out.println("3스트라이크 게임종료");
-	System.out.println(gameCount+"번만에 맞추셨습니다.");
+	System.out.println(gameCount+"번만에 맞췄네?");
 	break;//루프탈출
 }
 else {
 	//하나도 못맞추는 경우
 	if(strikeCnt==0 && ballCnt==0) {
-		System.out.println("아웃입니다");
+		System.out.println("아웃!!");
 	}
 	else {
 		System.out.printf("%d스트라이크, %d볼\n", strikeCnt, ballCnt);
@@ -101,16 +101,16 @@ else {
 		ballCnt = 0;
 		//continue문은 필요없음.
 	}
-}////while end
+}//while end
    ```
 사용자로부터 3개의 정수를 입력받고 게임카운트 1회 증가시킨 다음 볼과 스트라이크를 판단시키고 게임을 종료시킨다.<br>
 
 ```java
-System.out.println("한게임 더 하시겠습니까?(0:종료,1:재시작)");
+System.out.println("한게임 더 하실?(0:종료,1:재시작)");
 	int restart = sc.nextInt();
 	if(restart==0) {
 		//게임종료
-		System.out.println("\n==게임이 종료되었습니다.==\n");
+		System.out.println("\n==게임 끝!==\n");
 		//실행되는 즉시 main함수가 종료된다.
 		System.exit(0);
 	}
@@ -119,7 +119,7 @@ System.out.println("한게임 더 하시겠습니까?(0:종료,1:재시작)");
 		strikeCnt = 0;
 		ballCnt = 0;
 		gameCount = 0;
-		System.out.println("\n==게임을 재시작합니다.==\n");
+		System.out.println("\n==게임 리스타트!==\n");
 		}
 	}//게임 전체 반복 while end
   ```
@@ -161,15 +161,15 @@ public class Baseball2 {
 					//중복되지 않는 난수 생성에 성공하면 루프탈출
 					break;
 				}
-			}////while end
+			}//while end
 				
 			//난수확인
 			//System.out.println(randomCnt+"회:"+com1+" "+com2+" "+com3);
 				
 			while(true) {
 				//사용자로부터 3개의 정수를 입력받는다.
-				System.out.println("3개의정수를 입력하세요(1~9)");
-				System.out.println("스페이스로 구분하시고 마지막에 Enter를 눌러주세요");				
+				System.out.println("3개의정수를 입력해(1~9)");
+				System.out.println("스페이스로 구분하고 마지막에 Enter를 눌러");				
 				user1 = sc.nextInt();
 				user2 = sc.nextInt();
 				user3 = sc.nextInt();
@@ -190,13 +190,13 @@ public class Baseball2 {
 			//게임종료판단
 			if(strikeCnt==3) {
 				System.out.println("3스트라이크 게임종료");
-				System.out.println(gameCount+"번만에 맞추셨습니다.");
+				System.out.println(gameCount+"번만에 맞췄네?");
 				break;//루프탈출
 			}
 			else {
 				//하나도 못맞추는 경우
 				if(strikeCnt==0 && ballCnt==0) {
-					System.out.println("아웃입니다");
+					System.out.println("아웃!!");
 				}
 				else {
 					System.out.printf("%d스트라이크, %d볼\n", strikeCnt, ballCnt);
@@ -206,13 +206,13 @@ public class Baseball2 {
 					ballCnt = 0;
 					//continue문은 필요없음.
 				}
-			}////while end
+			}//while end
 				
-			System.out.println("한게임 더 하시겠습니까?(0:종료,1:재시작)");
+			System.out.println("한게임 더 하실?(0:종료,1:재시작)");
 			int restart = sc.nextInt();
 			if(restart==0) {
 				//게임종료
-				System.out.println("\n==게임이 종료되었습니다.==\n");
+				System.out.println("\n==게임 끝!==\n");
 				//실행되는 즉시 main함수가 종료된다.
 				System.exit(0);
 			}
@@ -221,7 +221,7 @@ public class Baseball2 {
 				strikeCnt = 0;
 				ballCnt = 0;
 				gameCount = 0;
-				System.out.println("\n==게임을 재시작합니다.==\n");
+				System.out.println("\n==게임 리스타트!==\n");
 				}
 			}//게임 전체 반복 while end
 	}//main 메서드 end
