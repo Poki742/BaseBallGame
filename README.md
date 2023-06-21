@@ -9,7 +9,7 @@ Java - Eclipse
 Random rd = new Random();
 Scanner sc = new Scanner(System.in);
   ```
-scanner와 randeom를 만든다.<br>
+sc와 rd를 만든다.<br>
 
 ```java
 //게임에서 사용할 변수
@@ -45,7 +45,7 @@ while(true) {
 //난수확인
 //System.out.println(randomCnt+"회:"+com1+" "+com2+" "+com3);
 ```
-난수확인을 할 사람은 만들어도 좋다. 하지만 안 하는게 더 머리는 좋아짐짐.<br>
+난수확인을 할 사람은 만들어도 좋다. 하지만 안 하는게 더 머리는 좋아짐.<br>
 
 ```java
 while(true) {
@@ -110,7 +110,7 @@ System.out.println("한게임 더 하시겠습니까?(0:종료,1:재시작)");
 				}
 			}//게임 전체 반복 while end
   ```
-각 상황에 맞는 메세지를 띄운다. int restart를 선언해 0을 넣을시 게임이 종료되고 1을 넣으면 재시작이 되도록 만든다.<br>
+각 상황에 맞는 메세지를 띄운다. restart를 int로 선언해 0을 넣을시 게임이 종료되고 1을 넣으면 재시작이 되도록 만든다.<br>
 카운트변수들도 초기화 시킨다.<br>
 
 ## 풀코드
